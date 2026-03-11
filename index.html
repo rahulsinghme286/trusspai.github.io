@@ -88,24 +88,57 @@ background:rgba(0,0,0,0.75);
 }
 
 .hero h1,
-.hero button{
+.hero .btn-container{
 position:relative;
 z-index:2;
 }
 
 .hero h1{
 font-size:50px;
-margin-bottom:20px;
+margin-bottom:40px;
+color:white;
 }
 
-.btn{
-padding:14px 30px;
-background:white;
-color:#4f46e5;
-border:none;
-border-radius:8px;
+/* HERO BUTTONS */
+.btn-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.btn-container a{
+text-decoration:none;
+}
+
+.fancy-btn{
+display:flex;
+align-items:center;
+gap:10px;
+padding:18px 40px;
+font-size:18px;
 font-weight:bold;
+border:none;
+border-radius:50px;
 cursor:pointer;
+color:white;
+background: linear-gradient(45deg, #4f46e5, #9333ea);
+transition: all 0.3s ease;
+box-shadow: 0 5px 15px rgba(79,70,229,0.3);
+}
+
+.fancy-btn i{
+font-size:20px;
+transition: transform 0.3s;
+}
+
+.fancy-btn:hover{
+transform: scale(1.05);
+box-shadow: 0 10px 25px rgba(79,70,229,0.5);
+}
+
+.fancy-btn:hover i{
+transform: rotate(20deg);
 }
 
 /* ICON STYLE */
@@ -305,14 +338,6 @@ overflow:hidden;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.contact form{
-max-width:700px;
-margin:auto;
-display:grid;
-gap:20px;
-}
-
-/* Updated Send Email Button */
 .contact button{
 padding:15px;
 background:#4f46e5;
@@ -388,13 +413,19 @@ color:#aaa;
 <section class="hero">
 <h1>Create Learning Games with AI Magic</h1>
 
+<div class="btn-container">
 <a href="#contact">
-<button class="btn">Request Demo</button>
+<button class="fancy-btn">
+<i class="fas fa-calendar-check"></i> Request Demo
+</button>
 </a>
 
 <a href="register.html">
-<button class="btn">Register Today</button>
+<button class="fancy-btn">
+<i class="fas fa-user-plus"></i> Register Today
+</button>
 </a>
+</div>
 
 </section>
 
