@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrusspAI</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+animation:magicLamp 3s ease-in-out infinite;
+}
+
+.logo span{
+color:#ff6600;
+}
+
+@keyframes magicLamp {
+0%,100% { transform: translateY(0) rotate(0deg); }
+25% { transform: translateY(-5px) rotate(-2deg); }
+50% { transform: translateY(5px) rotate(2deg); }
+75% { transform: translateY(-3px) rotate(-1deg); }
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#555;
+font-weight:500;
+}
+
+nav a:hover{
+color:#4f46e5;
+}
+
+/* HERO */
+.hero{
+padding:250px 20px;
+text-align:center;
+color:white;
+background-image:url("Images/image1.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+}
+
+.hero h1,
+.hero button{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.btn{
+padding:14px 30px;
+background:white;
+color:#4f46e5;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* ICON STYLE */
+.card-icon{
+font-size:40px;
+color:#4f46e5;
+margin-bottom:15px;
+}
+
+/* ABOUT */
+.about{
+padding:80px 60px;
+background:white;
+}
+
+.about h2{
+text-align:center;
+font-size:35px;
+margin-bottom:60px;
+color:#4f46e5;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+.about-card{
+background:#eef2ff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+text-align:center;
+}
+
+.about-card h3{
+margin-bottom:15px;
+color:#4f46e5;
+}
+
+/* FEATURES */
+.features-section{
+padding:80px 60px;
+background:#eef2ff;
+}
+
+.features-title{
+text-align:center;
+font-size:35px;
+margin-bottom:50px;
+color:#4f46e5;
+}
+
+.features-content{
+display:flex;
+gap:50px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.features-left{
+flex:1;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+text-align:center;
+}
+
+/* NEW: Center paragraph text */
+.feature p {
+    text-align: center;
+}
+
+.features-right{
+flex:1;
+text-align:center;
+}
+
+.features-right img{
+max-width:100%;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* PRICING */
+.pricing{
+padding:80px 60px;
+background:white;
+}
+
+.pricing-title{
+text-align:center;
+font-size:35px;
+margin-bottom:60px;
+color:#4f46e5;
+}
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+}
+
+.price-card{
+background:#eef2ff;
+padding:35px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.07);
+transition:0.3s;
+display:flex;
+flex-direction:column;
+}
+
+.price-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.price-card h3{
+font-size:24px;
+margin-bottom:10px;
+color:#4f46e5;
+}
+
+/* PRICE TEXT */
+.price{
+font-size:20px;
+font-weight:bold;
+color:#111827;
+margin-bottom:10px;
+}
+
+.price span{
+font-size:14px;
+color:#555;
+font-weight:normal;
+}
+
+.price-card ul{
+list-style:none;
+margin:20px 0;
+text-align:left;
+flex-grow:1;
+}
+
+.price-card li{
+margin:10px 0;
+color:#555;
+}
+
+.price-btn{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+background:#4f46e5;
+color:white;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* CONTACT */
+.contact{
+padding:80px 60px;
+background:white;
+}
+
+.contact h2{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+color:#4f46e5;
+}
+
+.contact form{
+max-width:700px;
+margin:auto;
+display:grid;
+gap:20px;
+}
+
+.contact input,
+.contact textarea{
+padding:15px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+width:100%;
+}
+
+.contact textarea{
+height:150px;
+}
+
+.contact button{
+padding:15px;
+background:#4f46e5;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* LOGIN BUTTON */
+.login-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#4f46e5;
+color:white;
+padding:15px 22px;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+overflow:hidden;
+z-index:2000;
+position:fixed;
+}
+
+/* Sparkles */
+.sparkle{
+position:absolute;
+width:6px;
+height:6px;
+background:#ffcc00;
+border-radius:50%;
+pointer-events:none;
+opacity:0.8;
+animation:sparkleAnim 1s linear forwards;
+}
+
+@keyframes sparkleAnim{
+0%{transform:scale(1); opacity:1;}
+50%{transform:scale(0.6) translate(6px,-6px); opacity:0.6;}
+100%{transform:scale(0.2); opacity:0;}
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+background:#111827;
+color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">TRUSS<span>PAI</span></div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#platform">Platform</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Create Learning Games with AI Magic</h1>
+<a href="#contact">
+<button class="btn">Request Demo</button>
+</a>
+</section>
+
+<section class="about" id="about">
+<h2>About Us</h2>
+<div class="about-grid">
+<div class="about-card">
+<i class="fas fa-bullseye card-icon"></i>
+<h3>Our Mission</h3>
+<p>Our mission is to make education engaging and inclusive by helping institutions turn traditional courses into AI-powered interactive learning games, using either our game library or custom designs, for learners of all abilities.</p>
+</div>
+<div class="about-card">
+<i class="fas fa-lightbulb card-icon"></i>
+<h3>Our Vision</h3>
+<p>To revolutionize learning by creating engaging, AI-driven experiences that unite diverse learners in a supportive community where everyone can learn, share, and grow.</p>
+</div>
+</div>
+</section>
+
+<section class="features-section" id="platform">
+<h2 class="features-title">Platform Features</h2>
+<div class="features-content">
+<div class="features-left">
+<div class="feature-grid">
+<div class="feature">
+<i class="fas fa-robot card-icon"></i>
+<h3>AI Course to Game Generator</h3>
+<p>Convert courses into games instantly.</p>
+</div>
+<div class="feature">
+<i class="fas fa-users card-icon"></i>
+<h3>Multiplayer Learning</h3>
+<p>Students collaborate and compete.</p>
+</div>
+<div class="feature">
+<i class="fas fa-chart-line card-icon"></i>
+<h3>Analytics Dashboard</h3>
+<p>Track learning progress.</p>
+</div>
+<div class="feature">
+<i class="fas fa-universal-access card-icon"></i>
+<h3>Custom games</h3>
+<p>Design and monetize your learning games</p>
+</div>
+</div>
+</div>
+<div class="features-right">
+<img src="Images/Image3.png">
+</div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<h2 class="pricing-title">Pricing Plans</h2>
+<div class="pricing-grid">
+
+<div class="price-card">
+<i class="fas fa-university card-icon"></i>
+<h3>Institutions</h3>
+<div class="price">$ <span>Request Quote</span></div>
+<ul>
+<li>✔ AI course to game Generator</li>
+<li>✔ Full Analytics</li>
+<li>✔ Multiplayer Learning</li>
+<li>✔ Inclusive and Accessible Learning</li>
+<li>✔ AI-Powered Personalization</li>
+<li>✔ Attract Learners outside the Institutions</li>
+<li>✔ Design custom games</li>
+</ul>
+<a href="#contact"><button class="price-btn">Request Quote</button></a>
+</div>
+
+<div class="price-card">
+<i class="fas fa-chalkboard-teacher card-icon"></i>
+<h3>Private Teachers</h3>
+<div class="price">$35 <span>/month</span><span>/Course</span>| $290 <span>/year</span><span>/Course</span></div>
+<ul>
+<li>✔ Convert private lessons into games</li>
+<li>✔ Exposure to worldwide market</li>
+<li>✔ Create personalized learning paths for each student</li>
+<li>✔ Use AI to connect and engage your students</li>
+<li>✔ Build your own branded digital classroom</li>
+<li>✔ Get paid for sharing your expertise</li>
+<li>✔ Design custom games</li>
+</ul>
+<a href="#contact"><button class="price-btn">Start Free Trial</button></a>
+</div>
+
+<div class="price-card">
+<i class="fas fa-user-graduate card-icon"></i>
+<h3>Students/Parents</h3>
+<div class="price">$25 <span>/month</span> | $199 <span>/year</span></div>
+<ul> 
+<li>✔ Now learn your favourite courses in gamified way</li>
+<li>✔ Earn achievements, badges, and rewards</li>
+<li>✔ Multiplayer learning games with friends</li>
+<li>✔ Parent can design game for their children.</li>
+<li>✔ Participate in quarterly events</li>
+<li>✔ Design custom games</li>
+</ul>
+<a href="#contact"><button class="price-btn">Get Started</button></a>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<form action="mailto:rahulsinghme2021@gmail.com" method="post" enctype="text/plain">
+<button type="submit">Send email</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 TrusspAI | AI Learning Platform</p>
+</footer>
+
+<div class="login-btn" id="loginBtn" onclick="window.location.href='login.html'">Login</div>
+
+<script>
+const loginBtn = document.getElementById('loginBtn');
+
+function createSparkle() {
+  const sparkle = document.createElement('div');
+  sparkle.className = 'sparkle';
+
+  sparkle.style.left = Math.random()*loginBtn.offsetWidth + "px";
+  sparkle.style.top = Math.random()*loginBtn.offsetHeight + "px";
+
+  loginBtn.appendChild(sparkle);
+
+  setTimeout(()=> sparkle.remove(),1000);
+}
+
+window.addEventListener('scroll', () => {
+  for(let i=0;i<3;i++){
+    createSparkle();
+  }
+});
+</script>
+
+</body>
+</html>
