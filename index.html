@@ -37,21 +37,15 @@ top:0;
 z-index:1000;
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
-animation:magicLamp 3s ease-in-out infinite;
+.logo img{
+width:180px; /* adjust size as needed */
+animation: slowBounce 3s ease-in-out infinite;
+cursor:pointer;
 }
 
-.logo span{
-color:#ff6600;
-}
-
-@keyframes magicLamp {
-0%,100% { transform: translateY(0) rotate(0deg); }
-25% { transform: translateY(-5px) rotate(-2deg); }
-50% { transform: translateY(5px) rotate(2deg); }
-75% { transform: translateY(-3px) rotate(-1deg); }
+@keyframes slowBounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-8px); } /* bounce height */
 }
 
 nav a{
@@ -417,7 +411,9 @@ color:#aaa;
 <body>
 
 <header>
-<div class="logo">TRUSS<span>PAI</span></div>
+<div class="logo">
+  <img src="logo.png" alt="TrusspAI Logo"> <!-- replace logo.png with your logo image -->
+</div>
 
 <nav>
 <a href="#">Home</a>
@@ -650,6 +646,7 @@ createSparkle();
 
 </body>
 </html>
+
 
 
 
