@@ -71,7 +71,7 @@ padding:250px 20px;
 text-align:center;
 color:white;
 background-image:url("image1.png");
-background-size:100%; /* changed from 'cover' to 120% */
+background-size:100%;
 background-position:center;
 background-repeat:no-repeat;
 position:relative;
@@ -185,9 +185,8 @@ box-shadow:0 5px 20px rgba(0,0,0,0.05);
 text-align:center;
 }
 
-/* NEW: Center paragraph text */
 .feature p {
-    text-align: center;
+text-align:center;
 }
 
 .features-right{
@@ -242,7 +241,6 @@ margin-bottom:10px;
 color:#4f46e5;
 }
 
-/* PRICE TEXT */
 .price{
 font-size:20px;
 font-weight:bold;
@@ -336,7 +334,6 @@ cursor:pointer;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 overflow:hidden;
 z-index:2000;
-position:fixed;
 }
 
 /* Sparkles */
@@ -392,54 +389,25 @@ color:#aaa;
 <section class="about" id="about">
 <h2>About Us</h2>
 <div class="about-grid">
+
 <div class="about-card">
 <i class="fas fa-bullseye card-icon"></i>
 <h3>Our Mission</h3>
-<p>Our mission is to make education engaging and inclusive by helping institutions turn traditional courses into AI-powered interactive learning games, using either our game library or custom designs, for learners of all abilities.</p>
+<p>Our mission is to make education engaging and inclusive by helping institutions turn traditional courses into AI-powered interactive learning games.</p>
 </div>
+
 <div class="about-card">
 <i class="fas fa-lightbulb card-icon"></i>
 <h3>Our Vision</h3>
-<p>To revolutionize learning by creating engaging, AI-driven experiences that unite diverse learners in a supportive community where everyone can learn, share, and grow.</p>
+<p>To revolutionize learning by creating engaging, AI-driven experiences that unite diverse learners.</p>
 </div>
-</div>
-</section>
 
-<section class="features-section" id="platform">
-<h2 class="features-title">Platform Features</h2>
-<div class="features-content">
-<div class="features-left">
-<div class="feature-grid">
-<div class="feature">
-<i class="fas fa-robot card-icon"></i>
-<h3>AI Course to Game Generator</h3>
-<p>Convert courses into games instantly.</p>
-</div>
-<div class="feature">
-<i class="fas fa-users card-icon"></i>
-<h3>Multiplayer Learning</h3>
-<p>Students collaborate and compete.</p>
-</div>
-<div class="feature">
-<i class="fas fa-chart-line card-icon"></i>
-<h3>Analytics Dashboard</h3>
-<p>Track learning progress.</p>
-</div>
-<div class="feature">
-<i class="fas fa-universal-access card-icon"></i>
-<h3>Custom games</h3>
-<p>Design and monetize your learning games</p>
-</div>
-</div>
-</div>
-<div class="features-right">
-<img src="image3.png">
-</div>
 </div>
 </section>
 
 <section class="pricing" id="pricing">
 <h2 class="pricing-title">Pricing Plans</h2>
+
 <div class="pricing-grid">
 
 <div class="price-card">
@@ -450,43 +418,25 @@ color:#aaa;
 <li>✔ AI course to game Generator</li>
 <li>✔ Full Analytics</li>
 <li>✔ Multiplayer Learning</li>
-<li>✔ Inclusive and Accessible Learning</li>
-<li>✔ AI-Powered Personalization</li>
-<li>✔ Attract Learners outside the Institutions</li>
-<li>✔ Design custom games</li>
 </ul>
-<a href="#contact"><button class="price-btn">Request Quote</button></a>
+
+<button class="price-btn" onclick="showWorkInProgress()">Request Quote</button>
 </div>
 
 <div class="price-card">
 <i class="fas fa-chalkboard-teacher card-icon"></i>
 <h3>Private Teachers</h3>
-<div class="price">$35 <span>/month</span><span>/Course</span>| $290 <span>/year</span><span>/Course</span></div>
-<ul>
-<li>✔ Convert private lessons into games</li>
-<li>✔ Exposure to worldwide market</li>
-<li>✔ Create personalized learning paths for each student</li>
-<li>✔ Use AI to connect and engage your students</li>
-<li>✔ Build your own branded digital classroom</li>
-<li>✔ Get paid for sharing your expertise</li>
-<li>✔ Design custom games</li>
-</ul>
-<a href="#contact"><button class="price-btn">Start Free Trial</button></a>
+<div class="price">$35 <span>/month</span></div>
+
+<button class="price-btn" onclick="showWorkInProgress()">Start Free Trial</button>
 </div>
 
 <div class="price-card">
 <i class="fas fa-user-graduate card-icon"></i>
 <h3>Students/Parents</h3>
-<div class="price">$25 <span>/month</span> | $199 <span>/year</span></div>
-<ul> 
-<li>✔ Now learn your favourite courses in gamified way</li>
-<li>✔ Earn achievements, badges, and rewards</li>
-<li>✔ Multiplayer learning games with friends</li>
-<li>✔ Parent can design game for their children.</li>
-<li>✔ Participate in quarterly events</li>
-<li>✔ Design custom games</li>
-</ul>
-<a href="#contact"><button class="price-btn">Get Started</button></a>
+<div class="price">$25 <span>/month</span></div>
+
+<button class="price-btn" onclick="showWorkInProgress()">Get Started</button>
 </div>
 
 </div>
@@ -494,9 +444,11 @@ color:#aaa;
 
 <section class="contact" id="contact">
 <h2>Contact Us</h2>
-<form action="mailto:rahulsinghme2021@gmail.com" method="post" enctype="text/plain">
-<button type="submit">Send email</button>
+
+<form action="mailto:rahulsinghme2021@gmail.com" method="post">
+<button type="submit">Send Email</button>
 </form>
+
 </section>
 
 <footer>
@@ -506,34 +458,32 @@ color:#aaa;
 <div class="login-btn" id="loginBtn" onclick="window.location.href='login.html'">Login</div>
 
 <script>
+
 const loginBtn = document.getElementById('loginBtn');
 
 function createSparkle() {
-  const sparkle = document.createElement('div');
-  sparkle.className = 'sparkle';
+const sparkle = document.createElement('div');
+sparkle.className = 'sparkle';
 
-  sparkle.style.left = Math.random()*loginBtn.offsetWidth + "px";
-  sparkle.style.top = Math.random()*loginBtn.offsetHeight + "px";
+sparkle.style.left = Math.random()*loginBtn.offsetWidth + "px";
+sparkle.style.top = Math.random()*loginBtn.offsetHeight + "px";
 
-  loginBtn.appendChild(sparkle);
+loginBtn.appendChild(sparkle);
 
-  setTimeout(()=> sparkle.remove(),1000);
+setTimeout(()=> sparkle.remove(),1000);
 }
 
 window.addEventListener('scroll', () => {
-  for(let i=0;i<3;i++){
-    createSparkle();
-  }
+for(let i=0;i<3;i++){
+createSparkle();
+}
 });
+
+function showWorkInProgress(){
+alert("Work in progress. Please contact us to request a demo and quotation");
+}
+
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
