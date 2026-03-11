@@ -157,37 +157,68 @@ margin-bottom:15px;
 }
 
 /* ABOUT */
-.about{
-padding:80px 60px;
-background:white;
-}
-
-.about h2{
+/* ABOUT TEXT */
+.about-text{
+max-width:900px;
+margin:0 auto 70px auto;
 text-align:center;
-font-size:35px;
-margin-bottom:60px;
-color:#4f46e5;
+line-height:1.8;
+font-size:18px;
+color:#555;
 }
 
+/* ABOUT GRID */
 .about-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:40px;
 }
 
+/* CARD STYLE */
 .about-card{
-background:#eef2ff;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-text-align:center;
+background:white;
+padding:40px 35px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+transition:all 0.35s ease;
+position:relative;
+text-align:left;
 }
 
+/* CARD HOVER EFFECT */
+.about-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* ICON BOX */
+.icon-box{
+width:65px;
+height:65px;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+margin-bottom:18px;
+
+background:linear-gradient(135deg,#4f46e5,#9333ea);
+color:white;
+}
+
+/* CARD TITLE */
 .about-card h3{
-margin-bottom:15px;
-color:#4f46e5;
+font-size:22px;
+margin-bottom:12px;
+color:#222;
 }
 
+/* CARD TEXT */
+.about-card p{
+font-size:16px;
+line-height:1.7;
+color:#555;
+}
 /* FEATURES */
 .features-section{
 padding:80px 60px;
@@ -647,6 +678,7 @@ createSparkle();
 
 </body>
 </html>
+
 
 
 
