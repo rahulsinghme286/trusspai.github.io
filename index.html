@@ -38,26 +38,20 @@ z-index:1000;
 }
 
 .logo{
-  font-size:28px;               /* slightly bigger */
-  font-weight:bold;
-  background: linear-gradient(90deg, #4f46e5, #9333ea, #ff6600);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: magicLamp 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 0 0 5px rgba(79,70,229,0.5);
+font-size:22px;
+font-weight:bold;
+animation:magicLamp 3s ease-in-out infinite;
 }
 
 .logo span{
-  color:#ff6600;                /* keeps the PAI in orange */
+color:#ff6600;
 }
 
-/* Glow animation */
-@keyframes glow {
-  0% { text-shadow: 0 0 5px rgba(79,70,229,0.5), 0 0 10px rgba(147,51,234,0.3); }
-  50% { text-shadow: 0 0 10px rgba(79,70,229,0.8), 0 0 20px rgba(147,51,234,0.5); }
-  100% { text-shadow: 0 0 5px rgba(79,70,229,0.5), 0 0 10px rgba(147,51,234,0.3); }
+@keyframes magicLamp {
+0%,100% { transform: translateY(0) rotate(0deg); }
+25% { transform: translateY(-5px) rotate(-2deg); }
+50% { transform: translateY(5px) rotate(2deg); }
+75% { transform: translateY(-3px) rotate(-1deg); }
 }
 
 nav a{
