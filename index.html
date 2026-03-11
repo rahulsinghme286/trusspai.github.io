@@ -141,6 +141,24 @@ box-shadow: 0 10px 25px rgba(79,70,229,0.5);
 transform: rotate(20deg);
 }
 
+/* PARTNERS SECTION */
+.partner-icon{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  transition: transform 0.5s;
+  animation: float 3s ease-in-out infinite;
+}
+
+.partner-icon:hover{
+  transform: scale(1.2);
+}
+
+@keyframes float{
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 /* ICON STYLE */
 .card-icon{
 font-size:40px;
@@ -429,6 +447,17 @@ color:#aaa;
 
 </section>
 
+<!-- OUR PARTNERS SECTION -->
+<section class="partners" style="padding:60px 20px; text-align:center; background:#f5f7fb;">
+  <h2 style="margin-bottom:40px; color:#4f46e5; font-size:28px;">Our Partners</h2>
+  <div style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+    <img src="partner1.png" alt="Partner 1" class="partner-icon">
+    <img src="partner2.png" alt="Partner 2" class="partner-icon">
+    <img src="partner3.png" alt="Partner 3" class="partner-icon">
+    <img src="partner4.png" alt="Partner 4" class="partner-icon">
+  </div>
+</section>
+
 <section class="about" id="about">
 <h2>About Us</h2>
 <div class="about-grid">
@@ -448,6 +477,7 @@ color:#aaa;
 </div>
 </section>
 
+<!-- Remaining sections remain unchanged -->
 <section class="features-section" id="platform">
 <h2 class="features-title">Platform Features</h2>
 
@@ -602,7 +632,3 @@ createSparkle();
 
 </body>
 </html>
-
-
-
-
