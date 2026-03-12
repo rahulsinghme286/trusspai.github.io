@@ -158,34 +158,46 @@ margin-bottom:15px;
 
 /* ABOUT */
 /* ABOUT TEXT */
+/* ABOUT SECTION */
+.about{
+padding:80px 60px;
+background:white;
+text-align:center;
+}
+
+.about h2{
+font-size:35px;
+margin-bottom:50px;
+color:#4f46e5;
+}
+
+/* ABOUT TEXT */
 .about-text{
 max-width:900px;
-margin:0 auto 70px auto;
-text-align:center;
+margin:0 auto 60px auto;
 line-height:1.8;
 font-size:18px;
 color:#555;
 }
 
-/* ABOUT GRID */
+/* GRID */
 .about-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:40px;
 }
 
-/* CARD STYLE */
+/* CARD */
 .about-card{
 background:white;
 padding:40px 35px;
 border-radius:14px;
 box-shadow:0 8px 25px rgba(0,0,0,0.06);
 transition:all 0.35s ease;
-position:relative;
-text-align:left;
+text-align:center;   /* CENTER EVERYTHING */
 }
 
-/* CARD HOVER EFFECT */
+/* HOVER EFFECT */
 .about-card:hover{
 transform:translateY(-10px);
 box-shadow:0 20px 45px rgba(0,0,0,0.12);
@@ -193,14 +205,14 @@ box-shadow:0 20px 45px rgba(0,0,0,0.12);
 
 /* ICON BOX */
 .icon-box{
-width:65px;
-height:65px;
-border-radius:12px;
+width:70px;
+height:70px;
+border-radius:14px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:26px;
-margin-bottom:18px;
+font-size:28px;
+margin:0 auto 18px auto; /* CENTER ICON */
 
 background:linear-gradient(135deg,#4f46e5,#9333ea);
 color:white;
@@ -218,6 +230,7 @@ color:#222;
 font-size:16px;
 line-height:1.7;
 color:#555;
+text-align:center;
 }
 /* FEATURES */
 .features-section{
@@ -498,25 +511,23 @@ color:#aaa;
 
   <div class="about-grid">
 
-    <!-- Mission Card -->
     <div class="about-card">
       <div class="icon-box">
         <i class="fas fa-bullseye"></i>
       </div>
       <h3>Our Mission</h3>
       <p>
-        To make education more engaging, interactive, and accessible by helping schools, institutions, and educators transform traditional courses into AI-powered learning games. We empower learners of all ages with personalized, gamified education that motivates and rewards progress.
+        To make education more engaging, interactive, and accessible by helping schools, institutions, and educators transform traditional courses into AI-powered learning games.
       </p>
     </div>
 
-    <!-- Vision Card -->
     <div class="about-card">
       <div class="icon-box">
         <i class="fas fa-lightbulb"></i>
       </div>
       <h3>Our Vision</h3>
       <p>
-        To revolutionize the way people learn through AI-driven interactive experiences that make education engaging, personalized, and inclusive. We envision a world where learners collaborate, compete, and grow together through gamified learning.
+        To revolutionize the way people learn through AI-driven interactive experiences that make education engaging, personalized, and inclusive.
       </p>
     </div>
 
@@ -678,6 +689,7 @@ createSparkle();
 
 </body>
 </html>
+
 
 
 
