@@ -37,26 +37,10 @@ top:0;
 z-index:1000;
 }
 
-/* LOGO WITH MAGIC LAMP ANIMATION */
-.logo{
-font-size:22px;
-font-weight:bold;
-animation:magicLamp 3s ease-in-out infinite;
-}
-
-.logo span{
-color:#ff6600;
-}
-
-.logo-blue{
-color:#4f46e5;
-}
-
-@keyframes magicLamp{
-0%,100%{transform:translateY(0) rotate(0deg);}
-25%{transform:translateY(-5px) rotate(-2deg);}
-50%{transform:translateY(5px) rotate(2deg);}
-75%{transform:translateY(-3px) rotate(-1deg);}
+.logo img{
+width:180px; /* adjust size as needed */
+animation: slowBounce 3s ease-in-out infinite;
+cursor:pointer;
 }
 
 nav a{
@@ -195,5 +179,6 @@ color:#aaa;
 </body>
 
 </html>
+
 
 
